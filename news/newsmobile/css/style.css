@@ -1,0 +1,35 @@
+header{
+	background-color: #3e98f0;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+}
+.header-logo{
+	height: 40px;
+	padding: 5px 0;
+}
+.header-logo .col-xs-4{
+	height: 40px;
+	background: url(http://m.baidu.com/static/news/webapp/webappandroid/img/bg-news-logo_344ce44.png) no-repeat center top;
+	background-size:100px;
+}
+header .col-xs-4,header .col-xs-2{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.divider{
+	margin: 5px;
+}
+#news-container .row{
+	position: relative;
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+#news-container .col-xs-7{
+	height: 80px;
+}
+
+.newsTime{
+	position: absolute;
+	bottom: 0;
+}

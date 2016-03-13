@@ -1,0 +1,7 @@
+body {
+    padding-top: 50px;
+}
+
+#newsindex,#insert,#update,#search,#search .container-fluid{
+    padding: 50px 0;
+}

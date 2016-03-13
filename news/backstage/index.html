@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新闻系统管理后台</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--顶部nav-->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" id="my-nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">新闻系统管理后台</a>
+            </div>
+        </div>
+    </nav>
+    <!--tab-->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#newsindex" aria-controls="home" role="tab" data-toggle="tab" id="newsindex-btn">新闻首页</a></li>
+        <li role="presentation"><a href="#insert" aria-controls="profile" role="tab" data-toggle="tab">增加</a></li>
+        <li role="presentation"><a href="#search" aria-controls="messages" role="tab" data-toggle="tab">查询</a></li>
+    </ul>
+    <!--tab内容-->
+    <div class="tab-content">
+        <!--新闻首页-->
+        <div role="tabpanel" class="tab-pane active" id="newsindex">
+            <div class="container table-responsive">
+                <table class="table table-striped" id="news-contanier">
+                </table>
+            </div>
+        </div>
+        <!--增加新闻内容-->
+        <div role="tabpanel" class="tab-pane" id="insert">
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                        <label for="newstitle">新闻类别</label>
+                        <select class="form-control" id="newstype" name="newstype">
+                            <option>推荐</option>
+                            <option>百家</option>
+                            <option>本地</option>
+                            <option>图片</option>
+                            <option>娱乐</option>
+                            <option>社会</option>
+                            <option>军事</option>
+                            <option>科技</option>
+                            <option>互联网</option>
+                            <option>体育</option>
+                            <option>国外</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="newstitle">新闻标题</label>
+                        <input type="text" class="form-control" placeholder="新闻标题" id="newstitle" name="newstitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="newsimg">新闻图片路径</label>
+                        <input type="text" class="form-control" placeholder="新闻图片路径" id="newsimg" name="newsimg">
+                    </div>
+                    <div class="form-group">
+                        <label for="newscontent">新闻内容</label>
+                        <textarea class="form-control" id="newscontent" name="newscontent"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="newstime">新闻时间</label>
+                        <p>
+                            <input type="date" id="newstime" name="newstime">
+                        </p>
+                    </div>
+                    <button type="submit" class="btn btn-default" id="insert-btn">增加</button>
+                    <button type="reset" class="btn btn-default">重置</button>
+                </form>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="search">
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                        <label for="search-news">请输入查询新闻的标题</label>
+                        <input type="type" class="form-control" id="search-news" name="search-news" placeholder="新闻标题">
+                    </div>
+                    <button type="submit" class="btn btn-default" id="search-news-btn">查询</button>
+                    <button type="reset" class="btn btn-default">重置</button>
+                    <div class="container-fluid table-responsive">
+                        <table class="table table-striped" id="search-news-contanier">
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
